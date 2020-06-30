@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
+import items from "./data";
 
 const RoomContext = React.createContext();
 
 class RoomProvider extends Component {
 
     state = {
-        greeting:"eae",
-        name:"Marleninho"
+        rooms:[],
+        sortedRooms:[],
+        featuredRooms:[],
+        loading:true,
     };
 
     render() {
@@ -19,6 +22,17 @@ class RoomProvider extends Component {
     }
 }
 
+componentDidMount()
+{
+    let rooms = this.formatData(items)    
+}
+
+formatData(items)
+{
+    let tempItems = items.map(item=> {
+        let id = item.sys.id.
+    })
+}
 const RoomConsumer = RoomContext.Consumer;
 
 
